@@ -80,7 +80,7 @@ button=Button(text="Распознать",command=recognize,width=20)
 button2=Button(text="Очистить",command=clear, width = 20)
 lbl0=Label(text="Толщина линии",font="Arial 10",width=15)
 lbl1=Label(text=" ",font="Arial 30",fg="red")
-lbl2=Label(text=" ",font="Arial 12",width=15)
+lbl2=Label(text=" ",font="Arial 12",width=19)
 
 lbl0.pack()
 
