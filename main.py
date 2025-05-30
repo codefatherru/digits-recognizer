@@ -40,7 +40,7 @@ def recognize():
     print(np.argmax(y2),' ',probability,'%')
 
     lbl1['text']=np.argmax(y2),
-    lbl2['text']='Probability:',probability,'%'
+    lbl2['text']='Вероятность:',probability,'%'
 
 
 
@@ -60,7 +60,7 @@ def clear():
 
     
 root = Tk()
-root.title("Digit Recognizer") 
+root.title("Распознование арабских цифр")
 
 
 cv = Canvas(root, width=width, height=height, bg='white')
@@ -76,9 +76,9 @@ cv.pack(side=RIGHT)
 cv.bind("<B1-Motion>", paint)
 
 
-button=Button(text="Recognize",command=recognize,width=20)
-button2=Button(text="Clear",command=clear, width = 20)
-lbl0=Label(text="Pen Size",font="Arial 10",width=15)
+button=Button(text="Распознать",command=recognize,width=20)
+button2=Button(text="Очистить",command=clear, width = 20)
+lbl0=Label(text="Толщина линии",font="Arial 10",width=15)
 lbl1=Label(text=" ",font="Arial 30",fg="red")
 lbl2=Label(text=" ",font="Arial 12",width=15)
 
