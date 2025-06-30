@@ -48,13 +48,13 @@ for i in range(epochs):
     for j in training_data_list:
         line=j.split(',')
 
-        inputs_list=(np.asfarray(line[1:])/255*0.99)+0.01
+        inputs_list=(np.asarray(line[1:],  dtype= np.float64)/255*0.99)+0.01
 
         targets_list=np.zeros(outputs_number)+0.01
         targets_list[int(line[0])]=0.99
 
         training(inputs_list,targets_list,fst_layer_weights,snd_layer_weights)
-            
+
 
 
 
@@ -79,13 +79,13 @@ def testing(inputs_list,fst_w,snd_w):
 
     return y2
 
-    
+
 
 
 for j in test_data_list:
     line=j.split(',')
 
-    inputs_list=(np.asfarray(line[1:])/255*0.99)+0.01
+    inputs_list=(np.asarray(line[1:],  dtype= np.float64)/255*0.99)+0.01
 
     target=int(line[0])
 
