@@ -18,6 +18,10 @@ def recognize():
     resized_img=grayscaled_img.resize((28,28),PIL.Image.ANTIALIAS)
 
     data = np.asarray(resized_img)
+
+    #print(data.shape)
+    #print(data)
+    #exit(7)
   
     inputs=np.reshape(data,(1,784)).T
   
